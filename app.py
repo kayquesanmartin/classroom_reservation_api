@@ -1,6 +1,7 @@
 from flask import Flask
 from database import db
 from reserva_route import routes
+from external_apis.client import ActivitiesAPIClient, SemesterAPIClient
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///reservas.db'
