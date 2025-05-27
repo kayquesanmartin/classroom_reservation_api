@@ -1,0 +1,13 @@
+services:
+  reservation_api:
+    build: .
+    ports:
+      - "5003:5003"   
+    volumes:
+      - .:/app
+    networks:
+      - api-network
+      
+networks:
+  api-network:
+    external: true
